@@ -1,4 +1,4 @@
-package com.example.vue.controller;
+package com.example.vdue.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,14 @@ public class UserController {
 			users = new ArrayList<>();
 		}
 		users.add(name);
+		
+		//模拟一个bug，让FindBugs找到bug
+		String s1 = "abc";
+		String s2 = "def";
+		if (s1 == s2) {
+			System.out.print(users.get(0));
+		}
+		
 		application.setAttribute("users", users);
 
 		return name + " Registered.";
