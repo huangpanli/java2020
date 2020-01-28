@@ -1,4 +1,4 @@
-package com.example.vdue.controller;
+package com.example.vue.controller;
 
 import java.util.ArrayList;
 import java.util.List;
