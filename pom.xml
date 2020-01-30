@@ -44,10 +44,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- site plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 			</plugin>
+			<!-- findbugs plugin -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
@@ -55,22 +57,24 @@
 				<configuration>
 					<threshold>High</threshold>
 					<effort>Default</effort>
-					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-					<xmlOutput>true</xmlOutput>
-					<findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>	
+					<findbugsXmlOutput>true</findbugsXmlOutput>					
+					<xmlOutputDirectory>target/site</xmlOutputDirectory>			
 				</configuration>
 			</plugin>
+			<!-- checkstyle plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.0</version>
 			</plugin>
+			<!-- pmd plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.12.0</version>
 			</plugin>
-			<!--  cobertura plugin start -->
+			<!-- cobertura plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>  
                 <artifactId>cobertura-maven-plugin</artifactId>  
@@ -81,12 +85,12 @@
                         <format>xml</format>  
                     </formats>  
                 </configuration>  
-            </plugin>       
-            <!--  cobertura plugin end -->	
+            </plugin>
 		</plugins>
 	</build>
 
 	<reporting>
+		<!-- 生成报告需要的插件配置 -->
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -95,12 +99,9 @@
 				<configuration>
 					<threshold>High</threshold>
 					<effort>Default</effort>
-					<!-- <xmlOutput>true</xmlOutput> -->
-					<!-- Optional directoryto put findbugs xdoc xml report -->
-					<!--<xmlOutputDirectory>target/site</xmlOutputDirectory> -->
-					<xmlOutputDirectory>target/site</xmlOutputDirectory>
-					<findbugsXmlOutput>true</findbugsXmlOutput>
-					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>	
+					<findbugsXmlOutput>true</findbugsXmlOutput>					
+					<xmlOutputDirectory>target/site</xmlOutputDirectory>			
 				</configuration>
 			</plugin>
 			<plugin>
@@ -120,6 +121,17 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.12.0</version>
 			</plugin>
+			 <plugin>
+                <groupId>org.codehaus.mojo</groupId>  
+                <artifactId>cobertura-maven-plugin</artifactId>  
+                <version>2.7</version>  
+                <configuration>  
+                    <formats>  
+                        <format>html</format>  
+                        <format>xml</format>  
+                    </formats>  
+                </configuration>  
+            </plugin>
 		</plugins>
 	</reporting>
 </project>
