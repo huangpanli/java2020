@@ -59,11 +59,7 @@
 					<effort>Default</effort>
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>	
 					<findbugsXmlOutput>true</findbugsXmlOutput>					
-					<xmlOutputDirectory>target/site</xmlOutputDirectory>
-					<formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>					
+					<xmlOutputDirectory>target/site</xmlOutputDirectory>			
 				</configuration>
 			</plugin>
 			<!-- checkstyle plugin -->
@@ -71,24 +67,12 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.0</version>
-				<configuration>  
-                    <formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>  
-                </configuration>  
 			</plugin>
 			<!-- pmd plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.12.0</version>
-				<configuration>  
-                    <formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>  
-                </configuration>  
 			</plugin>
 			<!-- cobertura plugin -->
             <plugin>
@@ -117,23 +101,13 @@
 					<effort>Default</effort>
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>	
 					<findbugsXmlOutput>true</findbugsXmlOutput>					
-					<xmlOutputDirectory>target/site</xmlOutputDirectory>
-					<formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>
+					<xmlOutputDirectory>target/site</xmlOutputDirectory>			
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.0</version>
-				<configuration>  
-                    <formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>  
-                </configuration>  
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -146,12 +120,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.12.0</version>
-				<configuration>  
-                    <formats>  
-                        <format>html</format>  
-                        <format>xml</format>  
-                    </formats>  
-                </configuration>  
 			</plugin>
 			 <plugin>
                 <groupId>org.codehaus.mojo</groupId>  
